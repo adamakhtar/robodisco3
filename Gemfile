@@ -5,27 +5,34 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'haml'
+gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-# Use unicorn as the web server
-# gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+group :test do
+  gem 'test-unit'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
+group :development do
+  #GENERATORS
+  #Rails 3 compatible generators for gems that don’t have them yet
+  gem 'rails3-generators'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
+  #generator to produce haml templates instead of default erb for scaffolds etc
+  #https://github.com/indirect/haml-rails
+  gem "haml-rails"
 
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+  #jquery generator for rails : https://github.com/indirect/jquery-rails
+  #Then, run bundle install. To invoke the generator, run:
+  #rails generate jquery:install #--ui to enable jQuery UI --version to install specific version of JQuery (default is 1.4.2)
+  #You're done! Don't forget to output csrf_meta_tag somewhere inside your <head> tag in your layout!
+  gem "jquery-rails"
+end
+
+
+
+

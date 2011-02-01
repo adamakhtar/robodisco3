@@ -33,6 +33,13 @@ module Robodisco3
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
+    config.generators do |g|
+      g.stylesheets false
+      g.test_framework :shoulda
+      g.fallbacks[:shoulda] = :test_unit
+      g.fixture_replacement :factory_girl
+    end
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
