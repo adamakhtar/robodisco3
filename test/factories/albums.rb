@@ -2,5 +2,5 @@
 Factory.define :album do |f|
   f.title "MyString"
   f.artist "MyString"
-  f.user_id 1
+
 end
