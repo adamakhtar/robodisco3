@@ -1,7 +1,5 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  should "be valid" do
-    assert User.new.valid?
-  end
+  should have_and_belong_to_many(:albums)
 end
