@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20110201063536) do
     t.datetime "updated_at"
   end
 
-  create_table "albums_users", :force => true do |t|
+  create_table "albums_users", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "album_id"
     t.datetime "created_at"

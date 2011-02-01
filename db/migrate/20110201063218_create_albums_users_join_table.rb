@@ -1,6 +1,6 @@
 class CreateAlbumsUsersJoinTable < ActiveRecord::Migration
   def self.up
-    create_table :albums_users do |t|
+    create_table :albums_users, :id => false do |t|
       t.integer :user_id
       t.integer :album_id
       t.timestamps
