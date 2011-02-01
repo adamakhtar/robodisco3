@@ -11,6 +11,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 
 group :test do
+
+  gem 'test-unit'
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'faker'
