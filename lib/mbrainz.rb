@@ -1,0 +1,3 @@
+module MBrainz
+
+end

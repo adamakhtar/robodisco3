@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'haml'
 gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem "rbrainz"
 
 
 group :test do

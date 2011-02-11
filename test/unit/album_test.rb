@@ -5,4 +5,6 @@ class AlbumTest < ActiveSupport::TestCase
 
   should validate_presence_of(:title)
   should validate_presence_of(:artist)
+
+
 end
