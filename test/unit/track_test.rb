@@ -7,4 +7,11 @@ class TrackTest < ActiveSupport::TestCase
     @track = Factory(:track)
     assert !@track.new_record?
   end
+
+  should "remove brackets from title on save" do
+    title = "(title)"
+    assert_equal "", Factory(:track, :title => title).title
+  end
+
+
 end
