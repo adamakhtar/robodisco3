@@ -3,5 +3,10 @@ class Album < ActiveRecord::Base
 
   validates_presence_of :title
   validates_presence_of :artist
+  validates_presence_of :mb_id
+  validates_uniqueness_of :mb_id
+
+
+  serialize :tracks, Array
 
 end
