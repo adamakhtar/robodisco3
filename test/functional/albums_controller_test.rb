@@ -2,11 +2,13 @@ require 'test_helper'
 
 class AlbumsControllerTest < ActionController::TestCase
   setup do
-    @album = Factory(:album)
+    @user  = Factory(:user)
+    @album = @user.albums.create(Factory.attributes_for(:album))
+
   end
 
   test "should get index" do
-    get :index
+    get :index, :user_id => @user.id
     assert_response :success
     assert_not_nil assigns(:albums)
   end

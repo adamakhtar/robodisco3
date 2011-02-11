@@ -13,7 +13,7 @@
     %tr
       %td= album.title
       %td= album.artist
-      %td= album.user_id
+
       %td= link_to 'Show', album
       %td= link_to 'Edit', edit_album_path(album)
       %td= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete

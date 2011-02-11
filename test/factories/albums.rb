@@ -2,5 +2,4 @@
 Factory.define :album do |f|
   f.title "MyString"
   f.artist "MyString"
-
 end
