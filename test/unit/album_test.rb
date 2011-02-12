@@ -10,7 +10,4 @@ class AlbumTest < ActiveSupport::TestCase
   should validate_presence_of(:artist)
   should validate_presence_of(:mb_id)
   should validate_uniqueness_of(:mb_id)
-
-
-
 end

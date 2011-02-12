@@ -13,11 +13,11 @@ gem "devise"
 
 
 group :test do
-
-  gem 'test-unit'
-  gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'mocha'
+  gem 'shoulda'
+  gem 'test-unit'
 end
 
 group :development do

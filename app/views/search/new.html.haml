@@ -1,0 +1,9 @@
+#container.search.index
+  = image_tag "face.jpg", :id => "face"
+  = form_tag(search_results_path(), :method => :post, :id => "search_form") do
+    %table
+      %tr
+        %td
+          = text_field_tag("query", "Enter an artist or album")
+        %td
+          = submit_tag("")

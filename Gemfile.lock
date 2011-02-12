@@ -58,6 +58,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.11)
+      rake
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -105,6 +107,7 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  mocha
   rails (= 3.0.3)
   rails3-generators
   rbrainz

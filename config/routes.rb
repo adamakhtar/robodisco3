@@ -1,7 +1,18 @@
 Robodisco3::Application.routes.draw do
+
+
+
+
+  get "player/show"
+
+  get "player/retrieve_videos"
+
   devise_for :users
 
-  root :to => "users#index"
+  root :to => "search#new"
+  match 'search_results' => 'search#results', :as => :search_results, :via => :post
+
+
 
   resources :albums
   resources :users
