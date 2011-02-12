@@ -5,7 +5,7 @@ class AlbumsController < ApplicationController
     @albums = Album.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # old_index.html.erb
       format.xml  { render :xml => @albums }
     end
   end

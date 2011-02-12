@@ -9,6 +9,7 @@ gem 'haml'
 gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "rbrainz"
+gem "devise"
 
 
 group :test do

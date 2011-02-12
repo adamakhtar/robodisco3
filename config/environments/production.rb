@@ -46,4 +46,8 @@ Robodisco3::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  #TODO - change this to production domain name
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
