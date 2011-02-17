@@ -6,26 +6,12 @@ class PlayerController < ApplicationController
   end
 
   def retrieve_videos
-
-    @other_youtube_videos = fetch_videos_from_youtube(:query => params[:track_info], :page => params[:page])
+    @other_youtube_videos = Track.query_youtube_for_videos(:query => params[:track_info], :page => params[:page])
     respond_to do |format|
       format.js  { render :layout => false }
     end
   end
 
-  private
 
-  def fetch_videos_from_youtube(params)
-    raise ArgumentError, "must supply a query to search for" unless params[:query] &&
-            !params[:query].blank?
-    client = YouTubeIt::Client.new
-    client.videos_by(:query => params[:query],
-                     :page => params[:page] || 1,
-                     :per_page => 7).videos.map do |video|
-      {:title => video.title, :thumbnail_url => video.thumbnails.first.url, :player_url => video.player_url,
-                :embed_url => video.embed_url, :view_count => video.view_count, :unique_id => video.unique_id }
-
-    end
-  end
 
 end
