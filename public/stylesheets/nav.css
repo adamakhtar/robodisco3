@@ -1,0 +1,30 @@
+#nav {
+  background: black;
+  padding: 1px; }
+  #nav #logo h1 {
+    margin: 16px 0 0 20px; }
+    #nav #logo h1 a {
+      text-decoration: none;
+      color: white; }
+  #nav form {
+    margin: 7px 20px -1px 0px; }
+    #nav form input[type=text] {
+      color: #7e8989;
+      background: url("../images/nav_search.png") no-repeat 0 0;
+      border: none;
+      padding: 0px 20px 10px;
+      margin-right: 5px;
+      width: 365px;
+      height: 60px;
+      font-size: 18px; }
+    #nav form input[type=submit] {
+      background: url("../images/live_search_button.png") no-repeat 0 0;
+      width: 105px;
+      height: 45px;
+      border: none; }
+      #nav form input[type=submit]:hover {
+        background: url("../images/live_search_button_hover.png") no-repeat 0 0; }
+      #nav form input[type=submit]:active {
+        position: relative;
+        top: 3px;
+        background: url("../images/live_search_button_pressed.png") no-repeat 0 0; }

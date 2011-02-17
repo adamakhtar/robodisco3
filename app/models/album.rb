@@ -20,13 +20,17 @@ class Album < ActiveRecord::Base
   def self.find_by_mb_id(params)
     q = MusicBrainz::Webservice::Query.new
     result = q.get_release_by_id(params[:mb_id], :tracks => true, :artist => true)
-    album = Album.new( :title => result.entity.title.to_s,
-               :artist => result.entity.artist.to_s,
-               :mb_id => result.entity.id.uuid.to_s )
+    album = Album.find_or_create_by_mb_id( :title => result.title.to_s,
+               :artist => result.artist.to_s,
+               :mb_id => result.id.uuid.to_s )
 
-    result.tracks.each do |t|
-      album.tracks.create(:title => t.title, :artist => t.artist )
+    if album.tracks.empty?
+      result.tracks.each do |t|
+        album.tracks.create!(:title => t.title, :artist => t.artist )
+      end
     end
+
+    return album
   end
 
 

@@ -1,10 +1,6 @@
 Robodisco3::Application.routes.draw do
 
-
-
-
-  get "player/show"
-
+  get "player/show", :as => :play_album
   get "player/retrieve_videos"
 
   devise_for :users

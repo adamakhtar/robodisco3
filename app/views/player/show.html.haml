@@ -1,2 +1,49 @@
-%h1 Player#show
-%p Find me in app/views/player/show.html.haml
+%div#nav
+  %div#container.fixed_width
+    %div#logo.left
+      %h1
+        = link_to "Robodisco.fm", root_path
+
+    = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
+      = text_field_tag("query", "Enter artist or album")
+      = submit_tag("")
+    %div.clear
+%div#background.player
+  %div#container.player
+
+
+    %div#track_info_panel.left.box_shadow.m_rounded_corners
+      %div.panel_header.m_top_rounded_corners
+        %h1.album_name
+          = @album.title
+
+      %div.panel_content.m_bottom_rounded_corners
+        %div#player_box
+        %div#track_listing_panel
+        %ul#track_listing.no_style
+          - @tracks.each do |track|
+            %li.s_rounded_corners
+              = link_to "<span class='title'>#{track.title}</span> - <span class='artist'>#{track.artist}</span>".html_safe, "#", :class => "track"
+
+        %h3#unplayable_title Tracks with no videos:
+        %ul#unplayable.no_style
+
+    %div#track_recommendations.right.box_shadow.s_rounded_corners
+
+      %div#related_albums_container
+        %div.panel_header.s_top_rounded_corners
+          %h4.search_results_title
+            Related Albums
+
+
+      %div#other_videos_container
+        %div.panel_header.s_top_rounded_corners
+          %h4.search_results_title
+            Other possible matches
+
+        %div.panel_content.s_bottom_rounded_corners
+          %ul#all_other_videos.no_style.videos_list
+
+
+          = link_to "More videos", "#", :class => "more_videos", :value => "1"
+    %div.clear

@@ -5,12 +5,12 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "devise"
 gem 'haml'
+gem "rbrainz"
 gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem "rbrainz"
-gem "devise"
-
+gem 'youtube-g', :require => 'youtube_g'
 
 group :test do
   gem 'factory_girl_rails'

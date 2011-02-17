@@ -96,6 +96,7 @@ GEM
     tzinfo (0.3.24)
     warden (1.0.3)
       rack (>= 1.0.0)
+    youtube-g (0.5.0)
 
 PLATFORMS
   ruby
@@ -115,3 +116,4 @@ DEPENDENCIES
   simple_form
   sqlite3-ruby
   test-unit
+  youtube-g

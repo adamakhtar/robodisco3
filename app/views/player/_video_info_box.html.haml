@@ -1,0 +1,11 @@
+%li.video{:id => video[:unique_id]}
+  %div.video_info_box
+    = image_tag video[:thumbnail_url], :class => "thumbnail left"
+    %div.info.right
+      %h4
+        = link_to video[:title], "#"
+      %p
+        %span.views
+          Views:
+          = video[:view_count]
+    %div.clear

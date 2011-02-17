@@ -17,6 +17,7 @@
             = artist_name
           - albums.each do |album|
             %div.name
-              = link_to album.title, "#"
+              = link_to album.title, play_album_path(:mb_id => album.mb_id)
+
 
 
