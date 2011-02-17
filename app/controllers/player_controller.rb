@@ -2,7 +2,6 @@ class PlayerController < ApplicationController
   def show
     @album = Album.find_by_mb_id(:mb_id => params[:mb_id])
     @tracks = @album.tracks
-    @other_youtube_videos = nil
   end
 
   def retrieve_videos
