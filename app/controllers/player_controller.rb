@@ -18,7 +18,7 @@ class PlayerController < ApplicationController
   def fetch_videos_from_youtube(params)
     raise ArgumentError, "must supply a query to search for" unless params[:query] &&
             !params[:query].blank?
-    client = YouTubeG::Client.new
+    client = YouTubeIt::Client.new
     client.videos_by(:query => params[:query],
                      :page => params[:page] || 1,
                      :per_page => 7).videos.map do |video|
