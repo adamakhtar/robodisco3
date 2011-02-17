@@ -12,11 +12,7 @@ class PlayerControllerTest < ActionController::TestCase
     end
   end
 
-  context "retrieve videos action" do
-    setup do
-      post
-    end
-  end
+
 
 
               

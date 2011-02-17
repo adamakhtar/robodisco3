@@ -10,7 +10,7 @@ gem 'haml'
 gem "rbrainz"
 gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'youtube-g', :require => 'youtube_g'
+gem 'youtube_it'
 
 group :test do
   gem 'factory_girl_rails'
