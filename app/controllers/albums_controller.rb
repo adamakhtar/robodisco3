@@ -4,9 +4,7 @@ class AlbumsController < ApplicationController
   def index
     @user   = User.find_by_id(params[:user_id])
     @albums = @user.albums.all
-    @other_users_albums = user_signed_in? ? Album.all(:order => "albums.created_at DESC",
-                                                      :limit =>10, :include => "users",
-                                                      :conditions => ["users.id != ? AND users.id != ?", nil, current_user.id] ) : []
+    @other_users_albums = user_signed_in? ? Album.find_all_favourited_by_everybody_but(current_user) : []
 
     respond_to do |format|
       format.html # old_index.html.erb

@@ -7,6 +7,13 @@ class Album < ActiveRecord::Base
   validates_presence_of :mb_id
   validates_uniqueness_of :mb_id
 
+  #returns all albums favourited by everybody but
+  #passed user.
+  def self.find_all_favourited_by_everybody_but(user, limit = 10)
+    self.all(:order => "albums.created_at DESC", :include => "users", :limit => limit,
+        :conditions => ["users.id != ? OR users.id != ?", nil, user.id] )
+  end
+
   def self.search_mbrainz_for(query)
     q = MusicBrainz::Webservice::Query.new
     results = q.get_releases(MusicBrainz::Webservice::ReleaseFilter.new(:query => "#{query} OR artist:#{query}"))
