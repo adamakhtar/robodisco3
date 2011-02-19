@@ -4,48 +4,30 @@ class AlbumsControllerTest < ActionController::TestCase
   setup do
     @user  = Factory(:user)
     @album = @user.albums.create(Factory.attributes_for(:album))
-
   end
 
-  test "should get index" do
-    get :index, :user_id => @user.id
-    assert_response :success
-    assert_not_nil assigns(:albums)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create album" do
-    assert_difference('Album.count') do
-      post :create, :album => @album.attributes
+  context ":get to :index" do
+    context "when logged in" do
+      setup do
+        sign_in(@user)
+        get :index, :user_id => @user.id
+      end
+      should assign_to(:user)
+      should assign_to(:albums)
+      should respond_with(:success)
+      should render_template(:index)
     end
 
-    assert_redirected_to album_path(assigns(:album))
-  end
-
-  test "should show album" do
-    get :show, :id => @album.to_param
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, :id => @album.to_param
-    assert_response :success
-  end
-
-  test "should update album" do
-    put :update, :id => @album.to_param, :album => @album.attributes
-    assert_redirected_to album_path(assigns(:album))
-  end
-
-  test "should destroy album" do
-    assert_difference('Album.count', -1) do
-      delete :destroy, :id => @album.to_param
+    context "when logged out" do
+      setup do
+        get :index, :user_id => @user.id
+      end
+      should assign_to(:user)
+      should assign_to(:albums)
+      should respond_with(:success)
+      should render_template(:index)
     end
-
-    assert_redirected_to albums_path
   end
+
+
 end

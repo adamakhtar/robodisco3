@@ -10,8 +10,10 @@ Robodisco3::Application.routes.draw do
 
 
 
-  resources :albums
-  resources :users
+
+  resources :users do
+     resources :albums, :only => [:index]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
