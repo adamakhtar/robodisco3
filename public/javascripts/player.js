@@ -8,7 +8,8 @@
             videoSelector : ".video",
             videoListSelector : ".videos_list",
             moreVideosSelector : ".more_videos",
-            searchUrl : "retrieve_videos"
+            searchUrl : "retrieve_videos",
+            favouriteSelector : ".favourite"
         }, callerSettings || {});
 
         settings.nextTrackSelector = ".track.next";
@@ -76,6 +77,12 @@
         };
 
         //set listeners
+        $(settings.favouriteSelector).click(function(){
+            var $button_form = $(this).parents("form.button_to");
+            $.post( $button_form.attr('action'), { id : $(".album_name").attr("id") }, null, "script" );
+            return false;
+        });
+
         $(settings.trackSelector).click(function(){
             setNext($(this));
             settings.nextPage = 1;

@@ -1,0 +1,19 @@
+div#container.albums_index h1 {
+  margin-left: 105px;
+  font-size: 35px; }
+div#container.albums_index table {
+  font-size: 25px;
+  table-layout: fixed; }
+  div#container.albums_index table td div.no_overflow {
+    height: 34px;
+    overflow: hidden; }
+  div#container.albums_index table col.option {
+    width: 105px; }
+  div#container.albums_index table col.artist {
+    width: 200px; }
+  div#container.albums_index table input.favourite_toggle {
+    vertical-align: middle; }
+  div#container.albums_index table a {
+    text-decoration: none; }
+    div#container.albums_index table a:visited {
+      color: blue; }

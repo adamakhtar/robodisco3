@@ -17,7 +17,7 @@ class Album < ActiveRecord::Base
     }
   end
 
-  def self.find_by_mb_id(params)
+  def self.search_mbrainz_by_mb_id(params)
     q = MusicBrainz::Webservice::Query.new
     result = q.get_release_by_id(params[:mb_id], :tracks => true, :artist => true)
     album = Album.find_or_create_by_mb_id( :title => result.title.to_s,

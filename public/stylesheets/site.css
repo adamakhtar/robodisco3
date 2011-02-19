@@ -153,6 +153,7 @@ div.result_box {
 div.name {
   width: 500px; }
 
+@impport "favourite_albums.sass";
 #nav {
   background: black;
   padding: 1px; }
