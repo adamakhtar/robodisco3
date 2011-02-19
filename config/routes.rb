@@ -12,7 +12,11 @@ Robodisco3::Application.routes.draw do
 
 
   resources :users do
-     resources :albums, :only => [:index]
+     resources :albums, :only => [:index] do
+      member do
+        post :toggle_favourite
+      end
+    end
   end
 
   # The priority is based upon order of creation:
