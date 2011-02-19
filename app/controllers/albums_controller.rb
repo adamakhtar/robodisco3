@@ -11,4 +11,18 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def toggle_favourite
+    @user = User.find_by_id(params[:user_id])
+    @album = Album.find_by_id(params[:id])
+
+    if @user.albums.find_by_id(@album.id)
+      @user.albums.delete(@album)
+    else
+      @user.albums << @album
+    end
+
+    respond_to do |format|
+      format.js  { render :layout => false }
+    end
+  end
 end

@@ -1,0 +1,5 @@
+<%- if @user.albums.find_by_id(@album.id) %>
+    $("a.favourite").text("Unfavourite");
+<%- else %>
+    $("a.favourite").text("Favourite");
+<%- end  %>
