@@ -12,9 +12,12 @@ class PlayerControllerTest < ActionController::TestCase
     end
   end
 
-
-
-
-              
+  context "retrieve_videos" do
+    setup do
+      xhr :get, :retrieve_videos
+    end
+    should assign_to(:other_youtube_videos)
+    should render_template(:retrieve_videos)
+  end
 end
 
