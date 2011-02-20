@@ -1,5 +1,5 @@
 <%- if @user.albums.find_by_id(@album.id) %>
-    $("input.favourite").attr("value", "Unfavourite");
+    $("input.favourite_toggle[id=<%= @album.id.to_s %>]").attr("value", "Unfavourite");
 <%- else %>
-    $("input.favourite").attr("value", "Favourite");
+    $("input.favourite_toggle[id=<%= @album.id.to_s %>]").attr("value", "Favourite");
 <%- end  %>
