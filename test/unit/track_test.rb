@@ -8,9 +8,9 @@ class TrackTest < ActiveSupport::TestCase
     assert !@track.new_record?
   end
 
-  should "remove brackets from title on save" do
-    title = "(title)"
-    assert_equal "", Factory(:track, :title => title).title
+  should "remove brackets and excess whitespace padding from title on save" do
+    title = "Sade (Group w/ singer of same performance name)"
+    assert_equal "Sade", Factory(:track, :title => title).title
   end
 
 

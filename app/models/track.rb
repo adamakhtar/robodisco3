@@ -4,7 +4,8 @@ class Track < ActiveRecord::Base
   before_save :remove_bracketed_text
 
   def remove_bracketed_text()
-    self.title = title.gsub(/\(.*?\)/,"")
+    self.title = title.gsub(/\(.*?\)/,"").strip
+    raise self.title.inspect
   end
 
   def self.query_youtube_for_videos(options)

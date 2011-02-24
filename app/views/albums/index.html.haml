@@ -13,11 +13,14 @@
       - @albums.each do |album|
         %tr
           %td
-            = button_to "Unfavourite", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
+            %div.no_overflow
+              = button_to "Unfavourite", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
           %td
-            = album.artist
+            %div.no_overflow
+              = album.artist
           %td
-            = link_to album.title, play_album_path(:mb_id => album.mb_id)
+            %div.no_overflow
+              = link_to album.title, play_album_path(:mb_id => album.mb_id)
   - unless @other_users_albums.empty?
     %h1 Other Users Favourite Albums
     - unless @other_users_albums.nil?
