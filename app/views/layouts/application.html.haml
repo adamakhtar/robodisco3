@@ -10,7 +10,9 @@
 %body
   %div.container
     %div#user_nav
+
       - if user_signed_in?
+        = link_to "Your Favourites", user_albums_path(current_user)
         = "Signed in as #{current_user.email}. Not you?"
         = link_to "Sign out", destroy_user_session_path
       - else
