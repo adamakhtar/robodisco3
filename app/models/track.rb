@@ -4,9 +4,10 @@ class Track < ActiveRecord::Base
   before_save :remove_bracketed_text
 
   def remove_bracketed_text()
-    self.title = title.gsub(/\(.*?\)/,"").strip
-    raise self.title.inspect
+    self.title  = title.gsub(/\(.*?\)/,"").strip
+    self.artist = artist.gsub(/\(.*?\)/,"").strip
   end
+
 
   def self.query_youtube_for_videos(options)
     options.reverse_merge!(:query => "", :page => 1, :per_page => 7)

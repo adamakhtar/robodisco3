@@ -13,5 +13,10 @@ class TrackTest < ActiveSupport::TestCase
     assert_equal "Sade", Factory(:track, :title => title).title
   end
 
+  should "remove brackets and excess whitespace padding from artist on save" do
+    title = "Sade (Group w/ singer of same performance name)"
+    assert_equal "Sade", Factory(:track, :title => title).title
+  end
+
 
 end

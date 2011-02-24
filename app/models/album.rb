@@ -24,6 +24,8 @@ class Album < ActiveRecord::Base
     }
   end
 
+
+
   def self.search_mbrainz_by_mb_id(params)
     q = MusicBrainz::Webservice::Query.new
     result = q.get_release_by_id(params[:mb_id], :tracks => true, :artist => true)
@@ -33,7 +35,7 @@ class Album < ActiveRecord::Base
 
     if album.tracks.empty?
       result.tracks.each do |t|
-        album.tracks.create!(:title => t.title, :artist => t.artist )
+        album.tracks.create!(:title => t.title, :artist => t.artist.name )
       end
     end
 
