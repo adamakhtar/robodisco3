@@ -1,0 +1,10 @@
+%div#nav
+  %div#container.fixed_width
+    %div#logo.left
+      %h1
+        = link_to "Robodisco.fm", root_path
+    = link_to "Your Albums", user_albums_path(current_user) if user_signed_in?
+    = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
+      = text_field_tag("query", "Enter artist or album")
+      = submit_tag("")
+    %div.clear

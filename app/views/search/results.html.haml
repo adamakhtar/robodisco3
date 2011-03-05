@@ -1,13 +1,5 @@
 //= javascript_include_tag "live_search_form.js"
-%div#nav.search
-  %div#container.fixed_width
-    %div#logo.left
-      %h1
-        = link_to "Robodisco", root_path
-    = form_tag({:path => ()}, :method => :get, :id => "search_form", :class =>"right") do
-      = text_field_tag("query", "Enter artist or album")
-      = submit_tag("")
-    %div.clear
+= render "shared/nav"
 %div#container.fixed_width
   %div#live_search_results
     - unless @albums.empty?
