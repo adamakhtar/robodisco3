@@ -15,9 +15,9 @@
     %div#track_info_panel.left.box_shadow.m_rounded_corners
       %div.panel_header.m_top_rounded_corners
         %h1.album_name{:id => @album.id}
-          = @album.title
           %span#favourite
             = favourite_link
+          = @album.title
       %div.panel_content.m_bottom_rounded_corners
         %div#player_box
         %div#track_listing_panel

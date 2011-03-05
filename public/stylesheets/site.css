@@ -45,14 +45,41 @@
     padding: 1px 15px 20px; }
 
 #track_info_panel {
-  width: 650px; }
+  width: 650px;
+  /* get rid of the dotted outline on button presses for firefos */ }
+  #track_info_panel #favourite {
+    margin-right: 10px; }
+    #track_info_panel #favourite * {
+      display: inline; }
+  #track_info_panel input.favourite_toggle::-moz-focus-inner {
+    border: 1px dotted transparent; }
+  #track_info_panel input.favourite_toggle {
+    border: none;
+    font-size: 16px;
+    height: 37px;
+    width: 87px; }
+    #track_info_panel input.favourite_toggle.like {
+      color: gray;
+      background-color: transparent;
+      background-image: url(../images/like.png);
+      background-repeat: no-repeat; }
+      #track_info_panel input.favourite_toggle.like:hover {
+        color: white; }
+    #track_info_panel input.favourite_toggle.liked {
+      color: white;
+      background-color: transparent;
+      background-image: url(../images/liked.png);
+      background-repeat: no-repeat; }
   #track_info_panel .panel_header {
-    padding: 8px 15px; }
+    padding: 8px 15px;
+    height: 46px;
+    background-image: url(../images/album-header-background.jpg);
+    background-repeat: repeat-x; }
     #track_info_panel .panel_header .album_name {
       color: white;
       font-size: 18px;
       font-weight: bold;
-      margin: 0px; }
+      margin-top: 4px; }
   #track_info_panel .panel_content {
     background: white;
     padding: 1px 15px 20px; }
@@ -155,7 +182,8 @@ div.name {
 
 @impport "favourite_albums.sass";
 #nav {
-  background: black;
+  background-repeat: repeat-x;
+  background-image: url(../images/nav-background.jpg);
   padding: 1px; }
   #nav #logo h1 {
     margin: 16px 0 0 20px; }

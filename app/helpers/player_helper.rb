@@ -2,12 +2,12 @@ module PlayerHelper
   def favourite_link
     if user_signed_in?
       if current_user.albums.find_by_mb_id(@album.mb_id)
-        button_to "Unfavourite", toggle_favourite_user_album_path(current_user, @album),{ :class => "favourite_toggle", :id => @album.id }
+        button_to "Liked", toggle_favourite_user_album_path(current_user, @album),{:class => "favourite_toggle liked", :id => @album.id }
       else
-        button_to "Favourite", toggle_favourite_user_album_path(current_user, @album), { :class => "favourite_toggle", :id => @album.id }
+        button_to "Like", toggle_favourite_user_album_path(current_user, @album), {:class => "favourite_toggle like", :id => @album.id }
       end
     else
-        button_to "Favourite", "#", :class => "login_required"
+        button_to "Like", "#", :class => "login_required like"
     end
   end
 end

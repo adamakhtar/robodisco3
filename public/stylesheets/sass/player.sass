@@ -71,16 +71,58 @@
 
 #track_info_panel
   width: 650px
+  #favourite
+    margin-right: 10px
+    & *
+      display: inline
+
+
+
+
+
+  /* get rid of the dotted outline on button presses for firefos */
+  input.favourite_toggle::-moz-focus-inner
+    border: 1px dotted transparent
+
+  input.favourite_toggle
+    &
+    border: none
+    font-size: 16px
+    height: 37px
+    width: 87px
+    &.like
+      color: gray
+
+      background:
+        color: transparent
+        image: url(../images/like.png)
+        repeat: no-repeat
+      &:hover
+        color: white
+
+    &.liked
+      color: white
+      background:
+        color: transparent
+        image: url(../images/liked.png)
+        repeat: no-repeat
+
+
 
 
   .panel_header
     padding: 8px 15px
+    height: 46px
+    background:
+      image: url(../images/album-header-background.jpg)
+      repeat: repeat-x
+
 
     .album_name
       color: white
       font-size: 18px
       font-weight: bold
-      margin: 0px
+      margin-top: 4px
 
 
 
