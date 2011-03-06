@@ -1,10 +1,23 @@
-%div#nav
+%div#site_nav
   %div#container.fixed_width
-    %div#logo.left
+    %div#logo
       %h1
         = link_to "Robodisco.fm", root_path
-    = link_to "Your Albums", user_albums_path(current_user) if user_signed_in?
-    = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
-      = text_field_tag("query", "Enter artist or album")
-      = submit_tag("")
+    %div#user_nav
+      %div#auth_and_reg
+        - if user_signed_in?
+          = link_to "Favourites", user_albums_path(current_user)
+          %span
+            |
+          = link_to "Sign out", destroy_user_session_path
+        - else
+          = link_to "Sign up", new_user_registration_path
+          |
+          = link_to "Sign in", new_user_session_path
+          |
+          Tune out
+
+      = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
+        = text_field_tag("query", "Enter artist or album")
+        = submit_tag("")
     %div.clear

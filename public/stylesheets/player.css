@@ -47,10 +47,14 @@
 #track_info_panel {
   width: 650px;
   /* get rid of the dotted outline on button presses for firefos */ }
-  #track_info_panel #favourite {
-    margin-right: 10px; }
-    #track_info_panel #favourite * {
-      display: inline; }
+  #track_info_panel h1.album_name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+    #track_info_panel h1.album_name #favourite {
+      margin-right: 10px; }
+      #track_info_panel h1.album_name #favourite * {
+        display: inline; }
   #track_info_panel input.favourite_toggle::-moz-focus-inner {
     border: 1px dotted transparent; }
   #track_info_panel input.favourite_toggle {

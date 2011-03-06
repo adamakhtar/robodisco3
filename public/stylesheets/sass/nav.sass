@@ -1,39 +1,82 @@
-#nav
+#site_nav
   background:
     repeat: repeat-x
     image:  url(../images/nav-background.jpg)
-
+  height: 80px
   padding: 1px
 
-  #logo h1
-    margin: 16px 0 0 20px
-    a
-      text-decoration: none
-      color: white
-      &:visited
-        color:white
+  div#container
+    position: relative
 
-  form
-    margin: 7px 20px -1px 0px
-    input[type=text]
-      color: #7e8989
-      background: url('../images/nav_search.png') no-repeat 0 0
-      border: none
-      padding: 0px 20px 10px
-      margin-right: 5px
-      width: 365px
-      height: 60px
-      font-size: 18px
-    input[type=submit]
-      background: url('../images/live_search_button.png') no-repeat 0 0
-      width: 105px
-      height: 45px
-      border: none
-      &:hover
-        background: url('../images/live_search_button_hover.png') no-repeat 0 0
-      &:active
-        position: relative
-        top: 3px
-        background: url('../images/live_search_button_pressed.png') no-repeat 0 0
+
+  #logo
+    position: absolute
+    top: 16px
+    left: 10px
+
+    h1
+      margin: 0px
+      a
+        text-decoration: none
+        color: white
+        &:visited
+          color:white
+  #user_nav
+    position: relative
+    right: 0px
+
+    #auth_and_reg
+      position: absolute
+      top: 30px
+      right: 455px
+
+      *
+        color: white
+        font-size: 16px
+        font-weight: bold
+      a
+        text-decoration: none
+        &:visited
+          color: white
+
+
+
+
+    form
+      background: url('../images/searchbar.png') no-repeat 0 0
+      position: relative
+      top: 13px
+      right: 10px
+      margin: 0
+      width: 423px
+      height: 50px
+
+      input[type=text]
+        position: aboslute
+        background: 0 none
+        left: 0px
+        top: 10px
+        padding: 0px 10px
+        color: #7e8989
+        border: 0 none
+        margin: 0px
+        width: 300px
+        height: 50px
+        font-size: 18px
+        &:focus
+          outline: none
+
+      input[type=submit]
+        position: absolute
+        top: 0px
+        right: 0px
+        background: 0 none
+        padding: 0
+        margin: 0
+        width: 98px
+        height: 50px
+        border: none
+        cursor: pointer
+
 
 
