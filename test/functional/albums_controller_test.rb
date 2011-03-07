@@ -63,14 +63,12 @@ class AlbumsControllerTest < ActionController::TestCase
       end
     end
 
-    context "when user is guest" do
+    context "when unauthenticated user" do
       setup do
-
+        post :toggle_favourite, :user_id => @user.id, :id => @album.id
       end
-
-      should "render login and signup form" do
-
-      end
+      should redirect_to("login form"){new_user_session_path()}
+      should set_the_flash.to(/you need to sign in or sign up/i)
     end
   end
 

@@ -1,9 +1,9 @@
-Robodisco3::Application.routes.draw do
 
+Robodisco3::Application.routes.draw do
+  devise_for :users
   get "player/show", :as => :play_album
   get "player/retrieve_videos"
 
-  devise_for :users
 
   root :to => "search#new"
   match 'search_results' => 'search#results', :as => :search_results, :via => :post
