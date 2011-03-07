@@ -3,40 +3,36 @@
   margin: auto;
   position: relative;
   background: white; }
-  #container.search.index #face {
-    margin-left: 255px;
-    margin-top: 100px; }
-  #container.search.index #search_form {
-    position: absolute;
-    left: 290px;
-    top: 268px;
-    background: url("../images/mouth.png") no-repeat transparent 0 0;
-    width: 500px;
-    height: 50px;
-    padding: 0;
-    margin: 0; }
-    #container.search.index #search_form tr input[type=text] {
-      margin: 0px 10px 3px 10px;
-      width: 362px;
-      height: 31px;
-      border: none;
-      font-size: 20px;
-      outline-width: 0px;
-      color: #7e8989; }
-    #container.search.index #search_form tr input[type=submit] {
-      outline: none;
-      -moz-outline-style: 0;
-      margin-top: -4px;
-      margin-left: 3px;
-      margin-right: 4px;
-      background: url("../images/search_button.png") no-repeat transparent 0 0;
-      width: 70px;
-      height: 50px;
-      border: none;
-      display: block-inline; }
-      #container.search.index #search_form tr input[type=submit]:hover {
-        background: url("../images/search_button_hover.png") no-repeat transparent 0 0; }
-      #container.search.index #search_form tr input[type=submit]:active {
-        background: url("../images/search_button_pressed.png") no-repeat transparent 0 0;
-        position: relative;
-        top: 2px; }
+  #container.search.index div {
+    position: relative;
+    top: 250px;
+    width: 645px;
+    margin: 0 auto; }
+    #container.search.index div h1#logo {
+      position: relative;
+      margin: 0 0 3px 0;
+      padding: 0; }
+      #container.search.index div h1#logo img {
+        border: none; }
+    #container.search.index div #search_form {
+      position: relative;
+      background: url("../images/search-form-homepage.png") no-repeat transparent 0 0;
+      width: 645px;
+      height: 86px;
+      padding: 0; }
+      #container.search.index div #search_form input[type=text] {
+        position: absolute;
+        left: 27px;
+        top: 19px;
+        width: 585px;
+        height: 41px;
+        border: none;
+        font-size: 20px;
+        outline-width: 0px;
+        color: #384461; }
+      #container.search.index div #search_form input[type=submit] {
+        outline: none;
+        -moz-outline-style: 0;
+        background: none;
+        border: none;
+        display: none; }

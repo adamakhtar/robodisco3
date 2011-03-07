@@ -1,3 +1,26 @@
+#home_nav {
+  background-repeat: repeat-x;
+  background-image: url(../images/nav-background-homepage.jpg);
+  height: 34px; }
+  #home_nav div#container {
+    position: relative; }
+    #home_nav div#container #user_nav {
+      position: absolute;
+      right: 10px;
+      top: 5px; }
+      #home_nav div#container #user_nav #auth_and_reg * {
+        color: white;
+        font-size: 16px;
+        font-weight: bold; }
+      #home_nav div#container #user_nav #auth_and_reg a {
+        text-decoration: none; }
+        #home_nav div#container #user_nav #auth_and_reg a:visited {
+          color: white; }
+      #home_nav div#container #user_nav #auth_and_reg span#tune_out {
+        color: A0A0A0;
+        font-style: italic;
+        font-weight: normal; }
+
 #site_nav {
   background-repeat: repeat-x;
   background-image: url(../images/nav-background.jpg);
@@ -29,6 +52,10 @@
         text-decoration: none; }
         #site_nav #user_nav #auth_and_reg a:visited {
           color: white; }
+      #site_nav #user_nav #auth_and_reg span#tune_out {
+        color: A0A0A0;
+        font-style: italic;
+        font-weight: normal; }
     #site_nav #user_nav form {
       background: url("../images/searchbar.png") no-repeat 0 0;
       position: relative;
