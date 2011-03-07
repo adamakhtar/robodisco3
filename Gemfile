@@ -6,6 +6,9 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "devise"
+gem "ruby_parser"
+gem "hpricot"
+
 gem 'haml'
 gem "rbrainz"
 gem 'simple_form'  #remember to run: rails generate simple_form:install
