@@ -7,7 +7,7 @@ module PlayerHelper
         button_to "Like", toggle_favourite_user_album_path(current_user, @album), {:class => "favourite_toggle like", :id => @album.id }
       end
     else
-        button_to "Like", "#", :class => "login_required like"
+        button_to "Like", "#", :class => "login_required favourite_toggle like"
     end
   end
 end
