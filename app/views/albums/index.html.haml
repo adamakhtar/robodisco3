@@ -1,48 +1,51 @@
 = render "shared/nav"
-%div#container.fixed_width.albums_index
-  %h1 Your Favourite Albums
-  - unless @albums.nil?
+%div#albums.container
+  %div.panel.m_rounded_corners.box_shadow
+    %div.m_header.m_top_rounded_corners
+      %h1 Your Favourite Albums
 
-    %table
-      %col.option
-      %col.artist
-      %col
-      %tr
-        %th
-        %th
-        %th
-      - @albums.each do |album|
-        %tr
-          %td
-            %div.no_overflow
-              = button_to "Unfavourite", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
-          %td
-            %div.no_overflow
-              = album.artist
-          %td
-            %div.no_overflow
-              = link_to album.title, play_album_path(:mb_id => album.mb_id)
-  - unless @other_users_albums.empty?
-    %h1 Other Users Favourite Albums
-    - unless @other_users_albums.nil?
-      %table
-        %col.option
-        %col.artist
-        %col
-        %tr
-          %th
-          %th
-          %th
-        - @other_users_albums.each do |album|
+    - unless @albums.nil?
+      %div.content.m_bottom_rounded_corners
+        %table
+          %col.option
+          %col.artist
+          %col
           %tr
-            %td
-              %div.no_overflow
-                = button_to "Favourite", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
-            %td
-              %div.no_overflow
-                = album.artist
-            %td
-              %div.no_overflow
-                = link_to album.title, play_album_path(:mb_id => album.mb_id)
+            %th
+            %th
+            %th
+          - @albums.each do |album|
+            %tr
+              %td
+                %div.no_overflow
+                  = button_to "Unlike", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
+              %td
+                %div.no_overflow
+                  = album.artist
+              %td
+                %div.no_overflow
+                  = link_to album.title, play_album_path(:mb_id => album.mb_id)
+    - unless @other_users_albums.empty?
+      %h1 Other Users Favourite Albums
+      - unless @other_users_albums.nil?
+        %table
+          %col.option
+          %col.artist
+          %col
+          %tr
+            %th
+            %th
+            %th
+          - @other_users_albums.each do |album|
+            %tr
+              %td
+                %div.no_overflow
+                  = button_to "Like", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
+              %td
+                %div.no_overflow
+                  = album.artist
+              %td
+                %div.no_overflow
+                  = link_to album.title, play_album_path(:mb_id => album.mb_id)
 
 

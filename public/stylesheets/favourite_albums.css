@@ -1,19 +1,21 @@
-div#container.albums_index h1 {
-  margin-left: 105px;
-  font-size: 35px; }
-div#container.albums_index table {
-  font-size: 25px;
-  table-layout: fixed; }
-  div#container.albums_index table td div.no_overflow {
-    height: 34px;
-    overflow: hidden; }
-  div#container.albums_index table col.option {
-    width: 105px; }
-  div#container.albums_index table col.artist {
-    width: 200px; }
-  div#container.albums_index table input.favourite_toggle {
-    vertical-align: middle; }
-  div#container.albums_index table a {
-    text-decoration: none; }
-    div#container.albums_index table a:visited {
-      color: blue; }
+#albums.container {
+  min-height: 100%;
+  height: 100%;
+  background-color: #dee5fa;
+  padding: 1px; }
+  #albums.container table {
+    font-size: 25px;
+    table-layout: fixed; }
+    #albums.container table td div.no_overflow {
+      height: 34px;
+      overflow: hidden; }
+    #albums.container table col.option {
+      width: 105px; }
+    #albums.container table col.artist {
+      width: 200px; }
+    #albums.container table input.favourite_toggle {
+      vertical-align: middle; }
+    #albums.container table a {
+      text-decoration: none; }
+      #albums.container table a:visited {
+        color: blue; }

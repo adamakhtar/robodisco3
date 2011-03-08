@@ -1,0 +1,40 @@
+/* default panel details here */
+div.panel .m_header {
+  padding: 8px 15px;
+  height: 46px;
+  background-image: url(../images/album-header-background.jpg);
+  background-repeat: repeat-x; }
+  div.panel .m_header h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 4px; }
+div.panel .content {
+  background: white;
+  padding: 1px 15px 20px; }
+
+/* customize defaul panel to suit individual pages */
+#authentication .panel h1, #users .panel h1, #albums .panel h1 {
+  font-size: 30px;
+  padding: 0 20px; }
+
+#users .panel, #albums .panel {
+  margin: 60px auto;
+  width: 950px; }
+  #users .panel .content > *, #albums .panel .content > * {
+    padding: 0 20px; }
+
+#authentication.container div.panel {
+  width: 400px;
+  margin: 120px auto 0px; }
+  #authentication.container div.panel form {
+    padding: 25px; }
+    #authentication.container div.panel form input[type=text], #authentication.container div.panel form input[type=password] {
+      width: 98%;
+      height: 30px;
+      font-size: 18px;
+      color: #384461; }
+    #authentication.container div.panel form input[type=submit] {
+      width: 35%;
+      height: 40px;
+      font-size: 18px; }

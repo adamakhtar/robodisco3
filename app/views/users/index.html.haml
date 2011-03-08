@@ -1,17 +1,22 @@
-%h1 Listing users
+= render "shared/nav"
+%div#users.container
+  %div.panel.m_rounded_corners.box_shadow
 
-%table
-  %tr
-    %th
-    %th
-    %th
+    %div.m_header.m_top_rounded_corners
+      %h1 Listing users
+    %div.content.m_bottom_rounded_corners
+      %table
+        %tr
+          %th
+          %th
+          %th
 
-  - @users.each do |user|
-    %tr
-      %td= link_to 'Show', user
-      %td= link_to 'Edit', edit_user_path(user)
-      %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+        - @users.each do |user|
+          %tr
+            %td= link_to 'Show', user
+            %td= link_to 'Edit', edit_user_path(user)
+            %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
 
-%br
+      %br
 
-= link_to 'New User', new_user_path
+      = link_to 'New User', new_user_path

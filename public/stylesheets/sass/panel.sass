@@ -1,0 +1,60 @@
+@import "colors.sass"
+
+
+
+
+/* default panel details here */
+div.panel
+  .m_header
+    padding: 8px 15px
+    height: 46px
+    background:
+      image: url(../images/album-header-background.jpg)
+      repeat: repeat-x
+    h1
+      color: white
+      font-size: 18px
+      font-weight: bold
+      margin-top: 4px
+
+  .s_header
+
+
+  .content
+    background: white
+    padding: 1px 15px 20px
+
+
+
+/* customize defaul panel to suit individual pages */
+
+#authentication, #users, #albums
+  .panel
+    h1
+      font-size: 30px
+      padding: 0 20px
+
+#users, #albums
+  .panel
+    margin: 60px auto
+    width: 950px
+    .content > *
+      padding: 0 20px
+
+
+#authentication.container div.panel
+  width: 400px
+  margin: 120px auto 0px
+
+  form
+    padding: 25px
+    input[type=text], input[type=password]
+      width: 98%
+      height: 30px
+      font-size: 18px
+      color: $field_text
+
+    input[type=submit]
+      width: 35%
+      height: 40px
+      font-size: 18px
