@@ -92,7 +92,7 @@
     height: 450px;
     padding: 10px;
     border: 1px #d1d6df solid;
-    margin: 0px auto 20px;
+    margin: 30px auto 20px;
     background: #eff5ff;
     display: block; }
   #track_info_panel #track_listing li {
@@ -191,6 +191,16 @@ div.name {
   height: 34px; }
   #home_nav div#container {
     position: relative; }
+    #home_nav div#container #logo {
+      position: absolute;
+      top: 5px;
+      left: 10px; }
+      #home_nav div#container #logo h1 {
+        margin: 0px;
+        font-size: 16px; }
+        #home_nav div#container #logo h1 a {
+          text-decoration: none;
+          color: white; }
     #home_nav div#container #user_nav {
       position: absolute;
       right: 10px;

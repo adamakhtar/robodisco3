@@ -1,4 +1,4 @@
-%div#site_nav
+%div{:id => small_version ? "home_nav" : "site_nav" }
   %div#container.fixed_width
     %div#logo
       %h1
@@ -20,8 +20,8 @@
           %span#tune_out
             Tune out
 
-
-      = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
-        = text_field_tag("query", "Enter artist or album")
-        = submit_tag("")
+      - unless small_version
+        = form_tag(search_results_path(), :method => :post, :id => "search_form", :class =>"right") do
+          = text_field_tag("query", "Enter artist or album")
+          = submit_tag("")
     %div.clear
