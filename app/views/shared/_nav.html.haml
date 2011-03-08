@@ -6,10 +6,13 @@
     %div#user_nav
       %div#auth_and_reg
         - if user_signed_in?
-          = link_to "Favourites", user_albums_path(current_user)
+          = link_to "Sign out", destroy_user_session_path
           %span
             |
-          = link_to "Sign out", destroy_user_session_path
+          = link_to "Profile", edit_user_registration_path
+          %span
+            |
+          = link_to "Albums", user_albums_path(current_user)
         - else
           = link_to "Sign up", new_user_registration_path
           %span
