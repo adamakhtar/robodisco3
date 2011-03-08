@@ -11,7 +11,7 @@ div.panel .m_header {
     margin-top: 4px; }
 div.panel .content {
   background: white;
-  padding: 1px 15px 20px; }
+  padding: 15px 15px; }
 
 /* customize defaul panel to suit individual pages */
 #authentication .panel h1, #users .panel h1, #albums .panel h1 {

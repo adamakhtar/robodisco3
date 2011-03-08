@@ -4,5 +4,10 @@
   background-color: #dee5fa;
   padding: 1px; }
   #users.container .panel ul li {
-    width: 100px;
-    float: left; }
+    width: 100px; }
+    #users.container .panel ul li a {
+      font-size: 25px;
+      color: #003EF6;
+      text-decoration: none; }
+      #users.container .panel ul li a:visited {
+        color: #003EF6; }

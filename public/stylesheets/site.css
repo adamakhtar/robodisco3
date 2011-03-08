@@ -92,7 +92,7 @@
     height: 450px;
     padding: 10px;
     border: 1px #d1d6df solid;
-    margin: 30px auto 20px;
+    margin: 0px auto 20px;
     background: #eff5ff;
     display: block; }
   #track_info_panel #track_listing li {
@@ -348,9 +348,11 @@ ul.no_style {
   list-style-type: none;
   list-style-position: inside; }
 
-ul.horizontal li {
-  display: block;
-  float: left; }
+ul.horizontal {
+  overflow: hidden; }
+  ul.horizontal li {
+    display: block;
+    float: left; }
 
 .dgblue {
   border: 1px solid blue; }
