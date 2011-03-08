@@ -8,6 +8,10 @@
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html =>  {:class => "content m_bottom_rounded_corners"}) do |f|
       = devise_error_messages!
       %p
+        = f.label :username
+        %br/
+        = f.text_field :username
+      %p
         = f.label :email
         %br/
         = f.text_field :email

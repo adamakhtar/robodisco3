@@ -5,11 +5,40 @@ class UsersControllerTest < ActionController::TestCase
     @user = Factory(:user)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:users)
+  context ":get to index" do
+    setup do
+      get :index
+    end
+
+    should respond_with :success
+    should assign_to(:users)
   end
+
+  context ":post to create" do
+    context "given valid credentials" do
+      setup do
+        @credentials = Factory.attributes_for(:user)
+        post :create, :user => @credentials
+      end
+
+      should "save record in db" do
+        assert User.find_by_username(@credentials[:username])
+      end
+    end
+
+    context "given invalid credentials" do
+      setup do
+        @credentials = Factory.attributes_for(:user, :username => "a")
+        post :create, :user => @credentials
+      end
+
+      should "not save record in db" do
+        assert_nil User.find_by_username(@credentials[:username])
+      end
+    end
+  end
+
+
 
   test "should get new" do
     get :new

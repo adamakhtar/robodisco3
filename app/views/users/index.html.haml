@@ -3,20 +3,9 @@
   %div.panel.m_rounded_corners.box_shadow
 
     %div.m_header.m_top_rounded_corners
-      %h1 Listing users
+      %h1 All Users
     %div.content.m_bottom_rounded_corners
-      %table
-        %tr
-          %th
-          %th
-          %th
-
+      %ul.no_style.horizontal
         - @users.each do |user|
-          %tr
-            %td= link_to 'Show', user
-            %td= link_to 'Edit', edit_user_path(user)
-            %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
-
-      %br
-
-      = link_to 'New User', new_user_path
+          %li
+            = user.email
