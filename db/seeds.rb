@@ -5,4 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
-User.create(:email => "adamsubscribe@googlemail.com", :password => "secrets", :password_confirmation => "secrets");
+User.find_or_create_by_username(:username => "adam", :email => "adamsubscribe@googlemail.com", :password => "secrets", :password_confirmation => "secrets")
+
+User.find_or_create_by_username(:username => "robodisco", :email => "adamtemporary@googlemail.com", :password => "secrets", :password_confirmation => "secrets")
+
+

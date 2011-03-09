@@ -1,5 +1,5 @@
 //= javascript_include_tag "live_search_form.js"
-= render "shared/nav"
+= render :partial => "shared/nav", :locals => {:small_version => false}
 %div#container.fixed_width
   %div#live_search_results
     - unless @albums.empty?
