@@ -48,6 +48,11 @@ Devise.setup do |config|
   # Setup a pepper to generate the encrypted password.
   config.pepper = "02658b0737c9ce88c746f73c703aaa2e9d3d9f5432fc7754849c938cad26b6ecb1b9c751faafb71a3fce07a95846918af3a0556cf585591f6bdf042373cb8291"
 
+  # ==> Configuration for :invitable
+  # Time interval where the invitation token is valid (default: 0).
+  # If invite_for is 0 or nil, the invitation will never expire.
+  # config.invite_for = 2.weeks
+  
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
   # he will be able to access your application without confirming. Default is nil.

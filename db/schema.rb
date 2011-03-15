@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313140409) do
+ActiveRecord::Schema.define(:version => 20110315110251) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(:version => 20110313140409) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => ""
+    t.string   "password_salt",                       :default => ""
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -57,6 +57,10 @@ ActiveRecord::Schema.define(:version => 20110313140409) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "username"
+    t.string   "invitation_token",     :limit => 20
+    t.datetime "invitation_sent_at"
   end
+
+  add_index "users", ["invitation_token"], :name => "index_users_on_invitation_token"
 
 end

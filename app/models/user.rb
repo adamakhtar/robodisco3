@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+  devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+
   attr_accessible :username, :email, :password, :password_confirmation
 
   has_and_belongs_to_many(:albums)
