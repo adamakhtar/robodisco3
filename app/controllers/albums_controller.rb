@@ -19,12 +19,14 @@ class AlbumsController < ApplicationController
 
     if @user.albums.find_by_id(@album.id)
       @user.albums.delete(@album)
+      @album_saved = false
     else
       @user.albums << @album
+      @album_saved = true
     end
 
     respond_to do |format|
-      format.js  { render :layout => false }
+      format.json  { render :json => @album_saved }
     end
   end
 end

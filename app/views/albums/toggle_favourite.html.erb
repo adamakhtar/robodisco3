@@ -1,5 +1,8 @@
+
 <%- if @user.albums.find_by_id(@album.id) %>
+    albumLiked = true;
     $("input.favourite_toggle[id=<%= @album.id.to_s %>]").attr("value", "Liked").toggleClass("like").toggleClass("liked");
 <%- else %>
+    albumLiked = false;
     $("input.favourite_toggle[id=<%= @album.id.to_s %>]").attr("value", "Like").toggleClass("like").toggleClass("liked");
 <%- end  %>
