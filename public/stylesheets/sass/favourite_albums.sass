@@ -5,23 +5,37 @@
   background-color: $background
   padding: 1px
 
-  table
+  ul
     font-size: 25px
-    table-layout: fixed
-    td div.no_overflow
+    padding: 0px
+    li
+      width: 100%
       height: 34px
-      overflow: hidden
+      margin-bottom: 10px
+      clear: both
+      *
 
-    col.option
-      width: 105px
-    col.artist
-      width: 200px
+        float: left
+      div.no_overflow
+        overflow: hidden
+        white-space: nowrap
+      .option
+        margin-right: 20px
+
+        input.favourite_toggle
+          width: 60px
+          margin-top: 5px
 
 
-    input.favourite_toggle
-      vertical-align: middle
-    a
-      text-decoration: none
-      &:visited
-        color: blue
+          vertical-align: middle
+          align: left
+      .artist
+        width: 250px
+        margin-right: 20px
+      .title
+        width: 500px
+        a
+          text-decoration: none
+          &:visited
+            color: blue
 

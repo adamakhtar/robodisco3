@@ -1,54 +1,34 @@
 = render :partial => "shared/nav", :locals => {:small_version => false}
 %div#albums.container
-  %div.panel.m_rounded_corners.box_shadow
+  %div#user_favourites.panel.m_rounded_corners.box_shadow
     %div.m_header.m_top_rounded_corners
       %h1 Your Favourite Albums
-
     - unless @albums.nil?
       %div.content.m_bottom_rounded_corners
-        %table
-          %col.option
-          %col.artist
-          %col
-          %tr
-            %th
-            %th
-            %th
+        %ul.no_style
           - @albums.each do |album|
-            %tr
-              %td
-                %div.no_overflow
-                  = button_to "Unlike", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
-              %td
-                %div.no_overflow
-                  = album.artist
-              %td
-                %div.no_overflow
-                  = link_to album.title, play_album_path(:mb_id => album.mb_id)
+            %li
+              %div.option.no_overflow
+                = button_to "Unlike", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
+              %div.no_overflow.artist
+                = album.artist
+              %div.no_overflow.title
+                = link_to album.title, play_album_path(:mb_id => album.mb_id)
   - unless @other_users_albums.empty?
-    %div.panel.m_rounded_corners.box_shadow
+    %div#others_favourites.panel.m_rounded_corners.box_shadow
       %div.m_header.m_top_rounded_corners
         %h1 Other Users Favourite Albums
       - unless @other_users_albums.nil?
         %div.content.m_bottom_rounded_corners
-          %table
-            %col.option
-            %col.artist
-            %col
-            %tr
-              %th
-              %th
-              %th
+          %ul.no_style
             - @other_users_albums.each do |album|
-              %tr
-                %td
-                  %div.no_overflow
-                    = button_to "Like", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
-                %td
-                  %div.no_overflow
-                    = album.artist
-                %td
-                  %div.no_overflow
-                    = link_to album.title, play_album_path(:mb_id => album.mb_id)
+              %li
+                %div.option.no_overflow
+                  = button_to "Like", toggle_favourite_user_album_path(@user, album), {:class => "favourite_toggle", :id => album.id}
+
+                %div.artist.no_overflow
+                  = album.artist
+                %div.title.no_overflow
+                  = link_to album.title, play_album_path(:mb_id => album.mb_id)
 
 
