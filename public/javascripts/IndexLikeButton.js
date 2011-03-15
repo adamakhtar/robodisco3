@@ -1,6 +1,8 @@
-var FavouriteButtonTo = {
+var IndexLikeButton = {
      initialize : function() {
-        $('input.favourite_toggle').click( FavouriteButtonTo.toggle );
+        $('input.favourite_toggle').hide();
+        $('input.favourite_toggle').click( IndexLikeButton.toggle );
+        $('li').hover( function() { $(this).find(".favourite_toggle").toggle() } );
      },
 
      toggle : function(){
@@ -9,7 +11,7 @@ var FavouriteButtonTo = {
         var $this = $(this);
         //$.post( $button_form.attr('action'), { id : albumId }, null, "script" );
         $.post( $button_form.attr('action'), { id : albumId }, function(data){
-            FavouriteButtonTo.update(data, $this);
+            IndexLikeButton.update(data, $this);
         });
         return false;
      },
@@ -30,6 +32,8 @@ var FavouriteButtonTo = {
      }
 };
 
+
+
 $(function(){
-    FavouriteButtonTo.initialize();
+    IndexLikeButton.initialize();
 });

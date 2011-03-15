@@ -8,7 +8,8 @@
     padding: 0px; }
     #albums.container ul li {
       width: 100%;
-      height: 34px;
+      display: block;
+      height: 40px;
       margin-bottom: 10px;
       clear: both; }
       #albums.container ul li * {
@@ -17,7 +18,9 @@
         overflow: hidden;
         white-space: nowrap; }
       #albums.container ul li .option {
-        margin-right: 20px; }
+        margin-right: 20px;
+        width: 65px;
+        height: 100%; }
         #albums.container ul li .option input.favourite_toggle {
           width: 60px;
           margin-top: 5px;
