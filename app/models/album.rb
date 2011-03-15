@@ -11,7 +11,7 @@ class Album < ActiveRecord::Base
   #passed user.
   def self.find_all_favourited_by_everybody_but(user, limit = 10)
     self.all(:order => "albums.created_at DESC", :include => "users", :limit => limit,
-        :conditions => ["users.id != ? OR users.id != ?", nil, user.id] )
+        :conditions => ["id NOT IN (?)", user.albums.map(&:id)] )
   end
 
   def self.search_mbrainz_for(query)

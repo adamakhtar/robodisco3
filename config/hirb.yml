@@ -1,0 +1,15 @@
+:output:
+    Album:
+      :options:
+        :fields:
+          - id
+          - title
+          - mb_id
+
+
+    User:
+      :options:
+        :fields:
+          - id
+          - username
+          - email

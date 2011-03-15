@@ -24,6 +24,7 @@ group :test do
 end
 
 group :development do
+  gem 'hirb'
   #GENERATORS
   #Rails 3 compatible generators for gems that don’t have them yet
   gem 'rails3-generators'

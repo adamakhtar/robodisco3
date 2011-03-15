@@ -13,3 +13,5 @@ class CreateAlbums < ActiveRecord::Migration
     drop_table :albums
   end
 end
+
+
