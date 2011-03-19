@@ -13,6 +13,9 @@
           %span
             |
           = link_to "Albums", user_albums_path(current_user)
+          %span
+            |
+          = link_to "Invite", new_user_invitation_path()
         - else
           = link_to "Sign up", new_user_registration_path
           %span
