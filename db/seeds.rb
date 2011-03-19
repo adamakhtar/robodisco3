@@ -9,4 +9,7 @@ User.find_or_create_by_username(:username => "adam", :email => "adamsubscribe@go
 
 User.find_or_create_by_username(:username => "robodisco", :email => "adamtemporary@googlemail.com", :password => "secrets", :password_confirmation => "secrets")
 
+Role.find_or_create_by_name(:name => "admin")
+
+
 
