@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: d1154eea92aa4c3fa0efee1b5d1f19b519a4c9b4
+  specs:
+    rails_admin (0.0.2)
+      builder (~> 2.1.0)
+      rails (~> 3.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -126,6 +134,7 @@ DEPENDENCIES
   mocha
   rails (= 3.0.3)
   rails3-generators
+  rails_admin!
   rbrainz
   ruby_parser
   shoulda

@@ -7,14 +7,15 @@ gem 'rails', '3.0.3'
 gem "cancan"
 gem "devise"
 gem "devise_invitable"
-gem "ruby_parser"
-gem "hpricot"
-
 gem 'haml'
+gem "hpricot"
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem "rbrainz"
+gem "ruby_parser"
 gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'youtube_it'
+
 
 group :test do
   gem 'factory_girl_rails'
