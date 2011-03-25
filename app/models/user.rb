@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :username
   validates_length_of     :username, :in => 3..20
+
+  def role?(name)
+    self.roles.exists?(:name => name)
+  end
 end

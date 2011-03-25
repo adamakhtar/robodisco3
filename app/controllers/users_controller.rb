@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all
+
 
     respond_to do |format|
       format.html # old_index.html.erb
