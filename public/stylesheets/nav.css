@@ -1,3 +1,21 @@
+#flash {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; }
+  #flash .notice, #flash .errors, #flash .alert {
+    margin: 0px;
+    padding: 8px;
+    color: white; }
+  #flash .notice {
+    background: #73ce6d;
+    border: 5px solid #6aba64; }
+  #flash .errors {
+    background: #d17070;
+    border: 5px solid #b76363; }
+  #flash .alert {
+    background: #d6a259;
+    border: 5px solid #c99854; }
+
 #home_nav {
   background-repeat: repeat-x;
   background-image: url(../images/nav-background-homepage.jpg);
