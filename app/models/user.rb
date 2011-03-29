@@ -11,7 +11,15 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   validates_length_of     :username, :in => 3..20
 
+  after_initialize :set_invitation_limit
+
   def role?(name)
     self.roles.exists?(:name => name)
+  end
+
+  private
+
+  def set_invitation_limit
+    self.invitation_limit = 0 unless self.invitation_limit
   end
 end

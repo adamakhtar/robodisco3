@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110319115947) do
+ActiveRecord::Schema.define(:version => 20110329131354) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -83,6 +83,9 @@ ActiveRecord::Schema.define(:version => 20110319115947) do
     t.string   "username"
     t.string   "invitation_token",     :limit => 20
     t.datetime "invitation_sent_at"
+    t.integer  "invitation_limit"
+    t.integer  "invited_by_id"
+    t.string   "invited_by_type"
   end
 
   add_index "users", ["invitation_token"], :name => "index_users_on_invitation_token"

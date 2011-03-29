@@ -40,11 +40,13 @@ GEM
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cancan (1.6.2)
-    devise (1.1.5)
+    devise (1.2.1)
       bcrypt-ruby (~> 2.1.2)
-      warden (~> 1.0.2)
-    devise_invitable (0.3.6)
-      devise (~> 1.1.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+    devise_invitable (0.4.rc5)
+      devise (~> 1.2.rc2)
+      rails (~> 3.0.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     factory_girl (1.3.3)
@@ -74,6 +76,7 @@ GEM
     mocha (0.9.11)
       rake
     oauth (0.4.4)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -122,8 +125,8 @@ PLATFORMS
 
 DEPENDENCIES
   cancan
-  devise
-  devise_invitable
+  devise (= 1.2.1)
+  devise_invitable (= 0.4.rc5)
   factory_girl_rails
   faker
   haml

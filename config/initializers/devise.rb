@@ -52,6 +52,8 @@ Devise.setup do |config|
   # Time interval where the invitation token is valid (default: 0).
   # If invite_for is 0 or nil, the invitation will never expire.
    config.invite_for = 1.days
+   config.invitation_limit = 0
+
 
 
   
