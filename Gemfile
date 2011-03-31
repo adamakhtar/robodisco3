@@ -35,6 +35,9 @@ group :development do
   #https://github.com/indirect/haml-rails
   gem "haml-rails"
 
+  #deploy staging, production easily to heroku
+  gem 'heroku_san'
+
   #jquery generator for rails : https://github.com/indirect/jquery-rails
   #Then, run bundle install. To invoke the generator, run:
   #rails generate jquery:install #--ui to enable jQuery UI --version to install specific version of JQuery (default is 1.4.2)
