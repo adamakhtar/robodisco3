@@ -8,7 +8,7 @@ class DeviseInvitableAddToUsers < ActiveRecord::Migration
     
     # And allow null encrypted_password and password_salt:
     change_column :users, :encrypted_password, :string, :null => true
-    change_column :users, :password_salt,      :string, :null => true
+
   end
   
   def self.down
