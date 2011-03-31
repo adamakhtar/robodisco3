@@ -1,6 +1,7 @@
 class PlayerController < ApplicationController
   def show
     @album = Album.search_mbrainz_by_mb_id(:mb_id => params[:mb_id])
+    @other_albums =
     @tracks = @album.tracks
   end
 

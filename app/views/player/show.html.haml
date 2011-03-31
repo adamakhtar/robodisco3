@@ -21,14 +21,20 @@
         %h3#unplayable_title Tracks with no videos:
         %ul#unplayable.no_style
 
-    %div#track_recommendations.right.box_shadow.s_rounded_corners
-
+    %div#related_albums.right.box_shadow.s_rounded_corners
       %div#related_albums_container
         %div.panel_header.s_top_rounded_corners
           %h4.search_results_title
-            Related Albums
-
-
+            Albums Just In!
+        %div.panel_content.s_bottom_rounded_corners
+          %ul.no_style
+            - Album.order("created_at DESC").limit(5).each do |album|
+              %li
+                %p
+                  = album.artist
+                %h4
+                  = link_to album.title, play_album_path(:mb_id => album.mb_id)
+    %div#track_recommendations.right.box_shadow.s_rounded_corners
       %div#other_videos_container
         %div.panel_header.s_top_rounded_corners
           %h4.search_results_title
