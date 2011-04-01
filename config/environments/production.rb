@@ -48,6 +48,16 @@ Robodisco3::Application.configure do
   config.active_support.deprecation = :notify
 
   #TODO - change this to production domain name
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'robodiscofm.heroku.com' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'baci.lindsaar.net',
+      :user_name            => 'robodisco.fm',
+      :password             => 'macadamia',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
 
 end
