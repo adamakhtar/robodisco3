@@ -1,4 +1,5 @@
 class PlayerController < ApplicationController
+  before_filter :authenticate_user!
   def show
     @album = Album.search_mbrainz_by_mb_id(:mb_id => params[:mb_id])
     @other_albums =

@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:toggle_favourite]
+  before_filter :authenticate_user!
   # GET /albums
   # GET /albums.xml
   def index

@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-
+  before_filter :authenticate_user!, :only => [:results]
 
   def new
   end
