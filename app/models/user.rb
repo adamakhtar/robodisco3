@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   validates_length_of     :username, :in => 3..20
 
   after_initialize :set_invitation_limit
+  before_create { self.roles << Role.find_or_create_by_name(:user) }
 
   def role?(name)
     self.roles.exists?(:name => name)

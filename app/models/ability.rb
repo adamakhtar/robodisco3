@@ -7,7 +7,7 @@ class Ability
        user ||= User.new # guest user (not logged in)
        if user.role?("admin")
          can :manage, :all
-       else
+       elsif user.role?(:user)
         can :read, [Album, Track, User]
        end
 
