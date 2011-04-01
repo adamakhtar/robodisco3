@@ -10,3 +10,8 @@
           - albums.each do |album|
             %div.name
               = link_to album.title, play_album_path(:mb_id => album.mb_id)
+
+    - else
+      %div.result_box
+        %h2 Oops! No Results Found
+        %p Try tweaking your search term.

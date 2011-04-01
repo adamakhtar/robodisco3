@@ -4,9 +4,9 @@
   %div#user_favourites.panel.m_rounded_corners.box_shadow
     %div.m_header.m_top_rounded_corners
       %h1 Your Favourite Albums
-    - unless @albums.nil?
-      %div.content.m_bottom_rounded_corners
-        %ul.no_style
+    %div.content.m_bottom_rounded_corners
+      %ul.no_style
+        - unless @albums.empty?
           - @albums.each do |album|
             %li
               %div.option.no_overflow
@@ -15,6 +15,9 @@
                 = album.artist
               %div.no_overflow.title
                 = link_to album.title, play_album_path(:mb_id => album.mb_id)
+        - else
+          %li
+            Create your collection by searching for albums above and liking them.
   - unless @other_users_albums.empty?
     %div#others_favourites.panel.m_rounded_corners.box_shadow
       %div.m_header.m_top_rounded_corners
