@@ -6,6 +6,8 @@
     = form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html =>  {:class => "content m_bottom_rounded_corners"} do |f|
       = devise_error_messages!
       %p
+        = "Currently you can send #{resource.invitation_limit} invitation(s)"
+      %p
         = f.label :email
         %br/
         = f.text_field :email
