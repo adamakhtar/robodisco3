@@ -25,7 +25,7 @@
       %div#related_albums_container
         %div.panel_header.s_top_rounded_corners
           %h4.search_results_title
-            Albums Just In!
+            Albums just in
         %div.panel_content.s_bottom_rounded_corners
           %ul.no_style
             - Album.order("created_at DESC").limit(5).each do |album|
