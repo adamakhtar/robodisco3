@@ -18,7 +18,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'youtube_it'
 
 group :development, :test do  
-  gem 'rspec-rails'  
+  gem 'rspec-rails', '2.6.1' 
+  gem 'capybara', '1.0.0' 
+  gem 'launchy', '2.0.5'  
 end  
 
 group :test do
