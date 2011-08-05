@@ -1,40 +1,26 @@
-@import "colors.sass"
-
-
-
+@import colors.sass
 
 #background.player
   background: $background
   padding: 1px
 
-
-
 #container.player
   width: 900px
   margin: 30px auto
 
-
-
-
-
-
 .panel_header
   background: black
-
 
 #related_albums
   ul
     li
       margin-top: 10px
-      border-bottom: 1px solid #DCDCDC
-
+      border-bottom: 1px solid #dcdcdc
 
 #related_albums, #track_recommendations
-  border: 1px solid #CFCFCF
+  border: 1px solid #cfcfcf
   margin-top: 15px
   width: 230px
-
-
   .panel_header
     padding: 6px 11px
     .search_results_title
@@ -42,7 +28,6 @@
       font-size: 14px
       font-weight: bold
       margin: 0px
-
   .video_info_box
     margin-top: 15px
     height: 95px
@@ -50,7 +35,7 @@
       width: 60px
       height: 50px
       padding: 3px
-      border: 1px solid #BFBFBF
+      border: 1px solid #bfbfbf
       margin-right: 10px
     .info
       width: 120px
@@ -64,21 +49,17 @@
     margin: 0
     font-size: 13px
   .panel_content
-
     background: white
     padding: 1px 15px 20px
+
 //    $rad = 8px
 //    -moz-border-radius: 0 0 $rad $rad
 //    -webkit-border-radius: 0 0 $rad $rad
 //    -khtml-border-radius: 0 0 $rad $rad
 //    border-radius: 0 0 $rad $rad
 
-
-
-
 #track_info_panel
   width: 650px
-
   h1.album_name
     overflow: hidden
     white-space: nowrap
@@ -87,11 +68,9 @@
       margin-right: 10px
       & *
         display: inline
-
-  /* get rid of the dotted outline on button presses for firefos */
+  /* get rid of the dotted outline on button presses for firefos
   input.favourite_toggle::-moz-focus-inner
     border: 1px dotted transparent
-
   input.favourite_toggle
     &
     border: none
@@ -100,54 +79,40 @@
     width: 87px
     &.like
       color: gray
-
       background:
         color: transparent
         image: url(../images/like.png)
         repeat: no-repeat
       &:hover
         color: white
-
     &.liked
       color: white
       background:
         color: transparent
         image: url(../images/liked.png)
         repeat: no-repeat
-
-
-
-
   .panel_header
     padding: 8px 15px
     height: 46px
     background:
       image: url(../images/album-header-background.jpg)
       repeat: repeat-x
-
-
     .album_name
       color: white
       font-size: 18px
       font-weight: bold
       margin-top: 4px
-
-
-
-
   .panel_content
     background: white
     padding: 1px 15px 20px
-
   #player_box
     width: 600px
     height: 450px
     padding: 10px
-    border: 1px #D1D6DF solid
+    border: 1px #d1d6df solid
     margin: 30px auto 20px
-    background: #EFF5FF
+    background: #eff5ff
     display: block
-
   #track_listing li
     margin-bottom: 3px
     background: #5fa6d2
@@ -161,11 +126,10 @@
       padding: 8px 0px
   #track_listing li.current_track
     background: #6cce46
-
   #unplayable_title
     font-size: 13px
     margin: 20px 15px 10px
-    color: #555
+    color: #555555
   #unplayable li
     background: #cddbe7
     margin-bottom: 3px
@@ -179,71 +143,53 @@
       padding: 8px 0px
       span
 
-
-
-
-
 .m_top_rounded_corners
-  $rad = 13px
+  $rad: 13px
   -moz-border-radius: $rad $rad 0 0
   -webkit-border-radius: $rad $rad 0 0
   -khtml-border-radius: $rad $rad 0 0
   border-radius: $rad $rad 0 0
 
 .m_bottom_rounded_corners
-  $rad = 13px
+  $rad: 13px
   -moz-border-radius: 0 0 $rad $rad
   -webkit-border-radius: 0 0 $rad $rad
   -khtml-border-radius: 0 0 $rad $rad
   border-radius: 0 0 $rad $rad
 
 .m_rounded_corners
-  $rad = 13px
+  $rad: 13px
   -moz-border-radius: $rad
   -webkit-border-radius: $rad
   -khtml-border-radius: $rad
   border-radius: $rad
 
 .s_top_rounded_corners
-  $rad = 8px
+  $rad: 8px
   -moz-border-radius: $rad $rad 0 0
   -webkit-border-radius: $rad $rad 0 0
   -khtml-border-radius: $rad $rad 0 0
   border-radius: $rad $rad 0 0
 
 .s_bottom_rounded_corners
-  $rad = 8px
+  $rad: 8px
   -moz-border-radius: 0 0 $rad $rad
   -webkit-border-radius: 0 0 $rad $rad
   -khtml-border-radius: 0 0 $rad $rad
   border-radius: 0 0 $rad $rad
 
 .s_rounded_corners
-  $rad = 8px
+  $rad: 8px
   -moz-border-radius: $rad
   -webkit-border-radius: $rad
   -khtml-border-radius: $rad
   border-radius: $rad
 
-
 .box_shadow
   $x_offset: 5px
   $y_offset: 5px
   $radius: 10px
-  $color: #777
-
+  $color: #777777
   -moz-box-shadow: $x_offset $y_offset $radius $color
   -webkit-box-shadow: $x_offset $y_offset $radius $color
   box-shadow: $x_offset $y_offset $radius $color
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,15 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "cancan"
 gem 'devise', '1.2.1'
 gem 'devise_invitable', '0.4.rc5'
-gem 'haml'
+gem 'haml', '3.1.2'
+gem 'sass', '3.1.7'
 gem "hpricot"
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => "rails-3.0"
 gem "rbrainz"
 gem "ruby_parser"
 gem 'simple_form'  #remember to run: rails generate simple_form:install
