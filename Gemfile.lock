@@ -51,6 +51,7 @@ GEM
     devise_invitable (0.4.rc5)
       devise (~> 1.2.rc2)
       rails (~> 3.0.0)
+    diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     factory_girl (2.0.2)
@@ -122,6 +123,19 @@ GEM
     rdoc (3.9.1)
     rest-client (1.6.3)
       mime-types (>= 1.16)
+    rspec (2.6.0)
+      rspec-core (~> 2.6.0)
+      rspec-expectations (~> 2.6.0)
+      rspec-mocks (~> 2.6.0)
+    rspec-core (2.6.4)
+    rspec-expectations (2.6.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.6.0)
+    rspec-rails (2.6.1)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.6.0)
     ruby_parser (2.0.6)
       sexp_processor (~> 3.0)
     sass (3.1.7)
@@ -169,6 +183,7 @@ DEPENDENCIES
   rails3-generators
   rails_admin!
   rbrainz
+  rspec-rails
   ruby_parser
   sass (= 3.1.7)
   shoulda

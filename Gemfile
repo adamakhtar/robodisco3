@@ -17,6 +17,9 @@ gem 'simple_form'  #remember to run: rails generate simple_form:install
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'youtube_it'
 
+group :development, :test do  
+  gem 'rspec-rails'  
+end  
 
 group :test do
   gem 'factory_girl_rails'
