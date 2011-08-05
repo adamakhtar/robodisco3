@@ -21,6 +21,8 @@ group :development, :test do
   gem 'rspec-rails', '2.6.1' 
   gem 'capybara', '1.0.0' 
   gem 'launchy', '2.0.5'  
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  
+  gem 'guard-rspec'  
 end  
 
 group :test do
