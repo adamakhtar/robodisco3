@@ -1,0 +1,28 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://musicbrainz.org:80/ws/1/release/959272f9-97ae-4179-aebe-950eef64ed93?type=xml&inc=artist+tracks
+    body: 
+    headers: 
+      user-agent: 
+      - rbrainz/0.5.2
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: 
+    headers: 
+      date: 
+      - Sat, 06 Aug 2011 10:44:44 GMT
+      content-type: 
+      - application/xml; charset=utf-8
+      connection: 
+      - keep-alive
+      keep-alive: 
+      - timeout=20
+      server: 
+      - nginx/0.7.65
+      content-length: 
+      - "1465"
+    body: <?xml version="1.0" encoding="UTF-8"?><metadata xmlns="http://musicbrainz.org/ns/mmd-1.0#" ><release type="Album Official" id="959272f9-97ae-4179-aebe-950eef64ed93"><title>Thriller</title><text-representation script="Latn" language="ENG" /><artist id="f27ec8db-af05-4f36-916e-3d57f91ecf5e"><name>Michael Jackson</name><sort-name>Jackson, Michael</sort-name></artist><track-list><track id="800a235e-e282-42f1-a276-f59b534b692a"><title>Wanna Be Startin' Somethin'</title><duration>364266</duration></track><track id="bdb2e3f3-1712-4016-9c1d-b5f43c5baa7b"><title>Baby Be Mine</title><duration>260840</duration></track><track id="2b650c75-f24b-4988-be92-bde220277488"><title>The Girl Is Mine (feat. Paul McCartney)</title><duration>222466</duration></track><track id="dab0c841-4dcc-451a-ab2c-1e0181e5d9f3"><title>Thriller</title><duration>359426</duration></track><track id="4d4221a4-1c00-4ad3-9f7c-e0457623bad0"><title>Beat It</title><duration>258866</duration></track><track id="f980fc14-e29b-481d-ad3a-5ed9b4ab6340"><title>Billie Jean</title><duration>294400</duration></track><track id="e6dbdfd4-59d4-4eee-a294-be683fe68204"><title>Human Nature</title><duration>246333</duration></track><track id="7e82e767-94a3-4b72-8d79-4623aa4ac584"><title>P.Y.T. (Pretty Young Thing)</title><duration>239266</duration></track><track id="e96071bc-f250-4d81-9b3b-632659a9562b"><title>The Lady in My Life</title><duration>299640</duration></track></track-list></release></metadata>
+    http_version: "1.1"

@@ -1,0 +1,28 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://musicbrainz.org:80/ws/1/release/?type=xml&query=%3B%3B%3A%3A%3Axcvcv%3Ad%3A+OR+artist%3A%3B%3B%3A%3A%3Axcvcv%3Ad%3A&cdstubs=no
+    body: 
+    headers: 
+      user-agent: 
+      - rbrainz/0.5.2
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: 
+    headers: 
+      date: 
+      - Sat, 06 Aug 2011 10:43:57 GMT
+      content-type: 
+      - application/xml; charset=utf-8
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - keep-alive
+      keep-alive: 
+      - timeout=20
+      server: 
+      - nginx/0.7.65
+    body: 
+    http_version: "1.1"
