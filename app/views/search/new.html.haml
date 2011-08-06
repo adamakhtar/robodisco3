@@ -6,4 +6,4 @@
         = image_tag("logo-homepage.png", :alt => "Robodisco.fm")
     = form_tag(search_results_path(), :method => :post, :id => "search_form") do
       = text_field_tag("query", "Enter an artist or album")
-      = submit_tag("")
+      = submit_tag("Search", :id => "search_submit")
