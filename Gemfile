@@ -24,6 +24,7 @@ group :development, :test do
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  
   gem 'guard-rspec'  
   gem 'vcr', '1.10.3'
+  gem 'fakeweb', '1.3.0'
 end  
 
 group :test do
