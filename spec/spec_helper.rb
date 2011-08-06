@@ -3,8 +3,22 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'vcr'
 
 require 'user_helper'
+
+#VCR gem description - 
+#Record your test suite's HTTP interactions and replay them during 
+#future test runs for fast, deterministic, accurate tests.
+VCR.config do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.stub_with                :fakeweb
+  c.default_cassette_options = { :record => :new_episodes }
+end
+
+RSpec.configure do |c|
+  c.extend VCR::RSpec::Macros
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -27,4 +41,6 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  config.extend VCR::RSpec::Macros
 end
