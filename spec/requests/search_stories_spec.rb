@@ -30,4 +30,16 @@ describe "SearchStories" do
       page.should have_content("Michael Jackson")
     end
   end
+
+  describe "when user clicks on search result on search page" do
+    it "shows the album in the player" do
+      log_in
+      search_for("michael jackson")
+
+      current_path.should == "/search_results"
+      page.first(".result_box a").click
+
+      current_path.should match %r{player/show}
+    end
+  end
 end
