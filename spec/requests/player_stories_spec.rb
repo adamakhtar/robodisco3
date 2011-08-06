@@ -15,8 +15,8 @@ describe "Player" do
       page.find("#track_listing").should have_selector("li")
     end
 
-
-    it "shows other users recent albums" do
+    
+    it "shows other users recent albums", :js => true do 
       page.should have_selector("#related_albums")
       page.find("#related_albums").should have_selector("li")
     end
