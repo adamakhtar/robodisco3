@@ -23,6 +23,7 @@ group :development, :test do
   gem 'launchy', '2.0.5'  
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i  
   gem 'guard-rspec'  
+  gem 'vcr', '1.10.3'
 end  
 
 group :test do
