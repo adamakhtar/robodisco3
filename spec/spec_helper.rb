@@ -11,6 +11,7 @@ require 'user_helper'
 #Record your test suite's HTTP interactions and replay them during 
 #future test runs for fast, deterministic, accurate tests.
 VCR.config do |c|
+  c.ignore_localhost = true
   c.cassette_library_dir     = 'spec/cassettes'
   c.stub_with                :fakeweb
   c.default_cassette_options = { :record => :new_episodes }
@@ -37,10 +38,23 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+  config.extend VCR::RSpec::Macros
+
+  #configure rspec to use database cleaner gem
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false #set to false for database_cleaner
 
-  config.extend VCR::RSpec::Macros
+  config.before(:suite) do  
+    DatabaseCleaner.strategy = :truncation  
+  end  
+    
+  config.before(:each) do  
+    DatabaseCleaner.start  
+  end  
+    
+  config.after(:each) do  
+    DatabaseCleaner.clean  
+  end  
 end
