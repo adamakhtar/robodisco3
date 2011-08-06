@@ -10,3 +10,10 @@ def log_in(user=nil)
   current_path.should == "/"
   page.should have_content("Signed in")
 end
+
+def search_for(query)
+  within("form#search_form") do
+    fill_in("query", :with => query)
+    click_button("search_submit")
+  end
+end
