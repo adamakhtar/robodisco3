@@ -28,5 +28,17 @@ describe "SearchStories" do
     end
   end
 
+  describe "when user enters valid search on search page" do
+    it "displays search results on search page" do
+      log_in
 
+       within("form#search_form") do
+        fill_in("query", :with => "michael jackson")
+        click_button("search_submit")
+      end
+
+      current_path.should == "/search_results"
+      page.should have_content("Michael Jackson")
+    end
+  end
 end
