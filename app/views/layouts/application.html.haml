@@ -3,9 +3,7 @@
 %head
   %title Robodisco.fm
   = stylesheet_link_tag :all
-  = javascript_include_tag  "jquery", "jquery.color.js",  "jquery.inspect.js", "jquery.pulse.js",
-                            "swfobject", "jQuery.tubeplayer.min.js", "application",
-                            "search_form.js"
+  = javascript_include_tag  "jquery", "jquery.color.js", "jquery_ujs", "jquery.inspect.js", "jquery.pulse.js", "swfobject", "jQuery.tubeplayer.min.js", "application", "search_form.js"
   = csrf_meta_tag
 %body
   = yield
