@@ -27,7 +27,9 @@ var IndexLikeButton = {
              });
          } else {
              $button.attr("value", "Like").toggleClass("like").toggleClass("liked");
-             $button.parents("li").slideUp("slow");
+             $button.parents("li").slideUp("slow", function(){
+                 $(this).remove();
+             });
          }
      }
 };
