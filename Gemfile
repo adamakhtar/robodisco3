@@ -18,6 +18,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'youtube_it'
 
 group :development, :test do  
+  gem 'jasmine', '1.0.2.1'
   gem 'database_cleaner', '0.6.7'
   gem 'rspec-rails', '2.6.1' 
   gem 'capybara', '1.0.0' 
